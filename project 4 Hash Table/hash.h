@@ -14,6 +14,10 @@ public:
 		if (separate_chaining) {
 			list_size = 999;
 		}
+		else {
+			table_size = table_size_ * list_size;
+			list_size = 1;
+		}
 		table_size = table_size_;
 		table = new list<T>*[table_size];
 		for (unsigned int i = 0; i < table_size; i++) {
